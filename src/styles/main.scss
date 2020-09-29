@@ -1,0 +1,154 @@
+// basic styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+// utility classes
+.container {
+  width: 400px;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.income {
+  color: #2fff39;
+}
+
+.expense {
+  color: #ff0000;
+}
+
+// navbar
+.navbar {
+  background: rgba(27, 38, 44, 0.9);
+  color: #fff;
+  padding: 1rem 20%;
+
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+
+// section: balance
+.balance {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 2rem;
+
+  h4,
+  h1 {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-weight: normal;
+  }
+}
+
+// section: income expenses
+.income-expenses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+// section: transaction list
+.transaction-list {
+  padding: 2rem;
+
+  li {
+    background-color: #ddd;
+    box-shadow: rgba(0, 0, 0, 0.9);
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 0.5rem;
+    margin: 1rem 0;
+
+    &:hover .delete {
+      opacity: 1;
+    }
+  }
+
+  .delete {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #333;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0.4rem;
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+// section: add transaction
+.add-transaction {
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .btn {
+    cursor: pointer;
+    background-color: rgba(27, 38, 44, 0.9);
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 1rem;
+    margin: 1rem 0 2rem;
+    padding: 0.6rem;
+    width: 100%;
+
+    &:hover {
+      background: rgba(27, 38, 44, 0.719);
+    }
+
+    &:active {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
